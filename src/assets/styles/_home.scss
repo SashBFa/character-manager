@@ -1,0 +1,53 @@
+.home{
+  @include introMob;
+  height: calc(100vh - 3rem);
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &__searchBar{
+    width: 100%;
+    height: 3rem;
+    font-size: 2rem;
+    padding-left: 1rem;
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0rem #30343f8c;
+    margin-bottom: 2rem;
+  }
+  &__receipt{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+@media screen and (min-width: 767px){
+  .home{
+    @include introTab;
+    &__searchBar{
+      margin: 0 5rem 2rem 5rem;
+      width: calc(100% - 10rem);
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+  .home{
+    @include introDesk;
+    &__searchBar{
+      margin: 0 25rem 2rem 25rem;
+      width: calc(100% - 50rem);
+    }
+  }
+}
+@media screen and (min-width: 1440px){
+  .home{
+    @include introLarge;
+    &__searchBar{
+      margin: 0 40rem 2rem 40rem;
+      width: calc(100% - 80rem);
+    }
+  }
+}

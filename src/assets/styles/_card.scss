@@ -1,0 +1,67 @@
+.card{
+  margin-bottom: 2rem;
+  padding: 1rem;
+  width: 28rem;
+  background-color: #2f3c709f;
+  background-image: -webkit-linear-gradient( left, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0) ), url(./../../../public/assets/images/overlay.png);
+  border-radius: 2rem;
+  box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.30);
+  display: grid;
+  grid-template-columns: auto 40% ;
+  grid-template-rows: 30% auto;
+  column-gap: 1rem;
+  grid-template-areas: 
+  "a b"
+  "c b";
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.1);
+    background-color: #5b6fbf9f;
+  }
+  &__title{
+    grid-area: a;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #FAFAFF;
+    text-shadow: 0.1rem 0.1rem 0rem #30343f8c;
+  }
+  &__img{
+    grid-area: b;
+    border-radius: 50%;
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.30);
+  }
+  &__shortDescription{
+    grid-area: c;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    color: #FAFAFF;
+    text-shadow: 0.1rem 0.1rem 0rem #30343f8c;
+  }
+}
+@media screen and (min-width: 767px){
+  .card{
+    width: 20rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__img{
+      margin: 2rem auto;
+    }
+    &__shortDescription{
+      height: 8rem;
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+  .home{
+    @include introDesk;
+  }
+}
+@media screen and (min-width: 1440px){
+  .home{
+    @include introLarge;
+  }
+}
